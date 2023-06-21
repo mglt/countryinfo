@@ -28,6 +28,7 @@ class CountryInfo:
         for file_path in __files_path:
             if isfile(file_path):
                 with open(file_path, encoding='utf-8') as file:
+#                    print( f"DEBUG: JSON loading file {file_path}" )
                     country_info = json.load(file)
                     # pprint(country_info)
                     if country_info.get('name', None):
